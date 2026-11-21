@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Precios · Rubén López</title>
+<meta name="theme-color" content="#0b0a08">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Hanken+Grotesk:wght@300..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+<header class="barra">
+  <a class="marca" href="../" aria-label="Rubén López, inicio">
+    <img src="../assets/emblema.jpg" alt="" width="40" height="40">
+    <span class="marca__txt"><strong>Rubén López</strong><small>IA · Automatización</small></span>
+  </a>
+  <nav class="pestanas" aria-label="Secciones">
+    <a href="../#servicios">Servicios</a>
+    <a href="../#como-trabajo">Cómo trabajo</a>
+    <a href="./" aria-current="page">Precios</a>
+    <a href="../#hablamos" class="pestanas__cta">¿Hablamos?</a>
+  </nav>
+</header>
+<main>
+  <section class="candado ancho" id="candado">
+    <div class="candado__caja">
+      <img src="../assets/emblema.jpg" alt="" width="120" height="120">
+      <h1>Página privada</h1>
+      <p>Los precios son para las empresas con las que ya estoy hablando. Escribe la contraseña que te he pasado.</p>
+      <form id="formulario" autocomplete="off">
+        <input id="clave" type="password" placeholder="contraseña" aria-label="Contraseña" autocapitalize="none" spellcheck="false" required>
+        <button class="boton boton--oro" type="submit">Ver los precios</button>
+        <p class="candado__error" id="error" role="alert"></p>
+      </form>
+    </div>
+  </section>
+  <section class="ancho bloque precios" id="contenido" hidden></section>
+</main>
+<footer class="pie"><span>© 2026 Rubén López</span><span>Página privada · no compartir</span><span class="pie__v">v0.1</span></footer>
+<script>
+(() => {
+  const paquete = {"v": 310000, "s": "AiZ3iTPe9p8vNhBMl9Lxhw==", "n": "7tpKBos8I9/orvHo", "d": "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"};
+  const bytes = t => Uint8Array.from(atob(t), c => c.charCodeAt(0));
+  const form = document.getElementById('formulario');
+  const error = document.getElementById('error');
+  form.addEventListener('submit', async ev => {
+    ev.preventDefault();
+    error.textContent = '';
+    const boton = form.querySelector('button');
+    boton.disabled = true; boton.textContent = 'Abriendo…';
+    try {
+      const clave = document.getElementById('clave').value.trim().toLowerCase();
+      const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(clave), 'PBKDF2', false, ['deriveKey']);
+      const llave = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: bytes(paquete.s), iterations: paquete.v, hash: 'SHA-256' },
+        base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      const claro = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: bytes(paquete.n) }, llave, bytes(paquete.d));
+      const destino = document.getElementById('contenido');
+      destino.innerHTML = new TextDecoder().decode(claro);
+      document.getElementById('candado').hidden = true;
+      destino.hidden = false;
+      window.scrollTo(0, 0);
+    } catch (e) {
+      error.textContent = 'Esa contraseña no abre la página. Revísala y prueba otra vez.';
+      boton.disabled = false; boton.textContent = 'Ver los precios';
+    }
+  });
+})();
+</script>
+</body>
+</html>

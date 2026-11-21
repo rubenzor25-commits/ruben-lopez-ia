@@ -1,0 +1,6 @@
+_privado/
+CLAUDE.md
+construir_precios.py
+.DS_Store
+__pycache__/
+.claude/
